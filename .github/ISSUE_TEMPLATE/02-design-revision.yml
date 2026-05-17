@@ -1,0 +1,69 @@
+name: 现有设计稿迭代
+description: 对某个已有概念的 design.md 提修订建议、补充章节、或推翻重写
+title: "[<concept-slug>] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        给某个已经存在的 `mod-inspiration/<slug>/design.md` 提改动。
+        不必"一次成稿"——质疑、推翻、重写都欢迎。
+
+  - type: input
+    id: concept
+    attributes:
+      label: 目标概念
+      description: 要改的概念目录名（kebab-case），对应 `mod-inspiration/<slug>/`。
+      placeholder: spice-bazaar
+    validations:
+      required: true
+
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: 改动类型
+      multiple: true
+      options:
+        - 补章节（按 README 模板）
+        - 修订核心机制
+        - 修订平衡性 / 防滥用
+        - 修订与其他模组的集成
+        - 补充风险与待研究
+        - 推翻重写
+        - 仅勘误（错别字 / 链接失效 / 排版）
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-state
+    attributes:
+      label: 当前稿的问题
+      description: 引用具体段落或一句话，让别人知道你在说哪儿。
+      placeholder: |
+        §4 核心机制第 3 段提到 NPC 商队"每 24h 刷新"，但没说明刷新点和路径……
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议改动
+      description: 直接给出想替换成的文本 / 结构 / 取舍。
+      placeholder: |
+        将刷新规则改为：刷新点固定 = 出生点 ±2000 格，路径在……
+    validations:
+      required: true
+
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: 取舍与代价（可选）
+      description: 这么改会牺牲什么？跟其他章节是否冲突？
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前自检
+      options:
+        - label: 已读最新版 `design.md`，确认不是已有内容
+          required: true
+        - label: 已检查相关章节是否需要联动改动

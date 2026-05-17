@@ -1,0 +1,94 @@
+name: 新概念提案
+description: 提议一个新的 mod-inspiration 概念稿（会落地为 mod-inspiration/<slug>/design.md）
+title: "[<concept-slug>] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        把一个新点子从一句话推到能写 design.md 的状态。
+        填完后会落地为 `mod-inspiration/<concept-slug>/design.md`，遵循 README 里的章节模板。
+
+  - type: input
+    id: slug
+    attributes:
+      label: 概念 slug
+      description: kebab-case，会作为目录名 `mod-inspiration/<slug>/`。
+      placeholder: spice-bazaar
+    validations:
+      required: true
+
+  - type: input
+    id: oneliner
+    attributes:
+      label: 一句话定位
+      description: 不超过 30 字，能让人立刻判断是不是感兴趣的方向。
+      placeholder: 偶发刷新的临时维度，丝绸之路风格商队 NPC 集市，以物易物 + 自有货币作中转
+    validations:
+      required: true
+
+  - type: textarea
+    id: goals
+    attributes:
+      label: 设计目标 / KPI
+      description: 这个概念解决什么玩家体验问题？怎么判断它"做对了"？
+      placeholder: |
+        - 给中期玩家一个"非战斗"的探索目标
+        - KPI：平均一次拜访停留 ≥ 10 分钟，二次拜访率 ≥ 40%
+    validations:
+      required: true
+
+  - type: textarea
+    id: core-mechanic
+    attributes:
+      label: 核心机制（一两段话）
+      description: 玩家进入这个系统会经历什么？关键的交互循环是什么？
+      placeholder: |
+        商队 NPC 每 24h 游戏时间换一批存货；玩家用"香料印记"作中转货币……
+    validations:
+      required: true
+
+  - type: textarea
+    id: integrations
+    attributes:
+      label: 与其他模组的集成（可选）
+      description: 想搭哪些已有模组的车？哪些需要写兼容？
+      placeholder: |
+        - 依赖 / 推荐：CreativeCore, KubeJS
+        - 兼容：Create（用其管道传输商品）
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: 风险与待研究
+      description: 你已经想到、但还没答案的坑。允许"我不知道"。
+      placeholder: |
+        - 临时维度的世界生成性能未知
+        - 货币如何防滥用（无限刷）
+
+  - type: dropdown
+    id: implementation-stage
+    attributes:
+      label: 期望的落地阶段
+      description: 这个概念你认为最适合哪一阶段先做？
+      options:
+        - 数据包 + KubeJS（最快）
+        - 独立 mod
+        - 不确定 / 需要讨论
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 其他备注（可选）
+      description: 参考资料、灵感来源、ASCII 草图、相关 issue……
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前自检
+      options:
+        - label: 已读过 README 的目录约定与章节模板
+          required: true
+        - label: 这个 slug 在 `mod-inspiration/` 下还没被占用
+          required: true

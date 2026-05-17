@@ -1,0 +1,30 @@
+name: 讨论 / 咨询
+description: 开放式讨论、对设计方向拿不准、想问"你们觉得 X 怎么样"
+title: "[discuss] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这条不要求"可落地"。想抛个问题、做个对比、收集反馈都行。
+        不希望被 agent 自动接走的话，不要加 `agent:backlog` 标签。
+
+  - type: textarea
+    id: topic
+    attributes:
+      label: 想讨论的主题
+      placeholder: |
+        既然 spice-bazaar 走"以物易物 + 自有货币"，那我们要不要……
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 上下文 / 你已经想过的
+      description: 别人不必从零猜，写出你已经否决的方案能省一轮回复。
+
+  - type: textarea
+    id: ask
+    attributes:
+      label: 想要的回应
+      description: 你想要一个决定、一个二选一、一份对比、还是只是发散讨论？
