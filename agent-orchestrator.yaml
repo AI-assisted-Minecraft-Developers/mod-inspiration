@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/ComposioHQ/agent-orchestrator/main/schema/config.schema.json
+$schema: https://raw.githubusercontent.com/ComposioHQ/agent-orchestrator/main/schema/config.schema.json
+
+runtime: tmux
+agent: claude-code
+workspace: worktree
+
+tracker:
+  plugin: github
+scm:
+  plugin: github
+
+agentRules: |
+  这是一个 Minecraft 模组设计稿仓库，主要内容是 design.md 和概念资料，没有可编译代码。
+  处理 issue / PR 时遵循：
+  - 新设计稿：在 mod-inspiration/<concept-slug>/design.md 下落地，参考 README 的章节模板
+  - 修订已有设计稿：保留章节结构，重要决策写进「风险与待研究」或「后续可拓展点」
+  - PR 标题格式：[<concept>] <一句话主题>
+  - 不做代码编译/单测，验收以 markdown 渲染正确 + 章节齐全为准
