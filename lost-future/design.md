@@ -85,14 +85,14 @@ flowchart TD
 
 | ID | 名称 | 概念图 | 提及来源 | 原貌 | 本模组中的新作用 | 平衡权重 | 参考 |
 |---|---|---|---|---|---|---|---|
-| `<lf>:dirt_slab` | 泥土半砖 | <img src="./assets/dirt_slab.png" width="64"> | Survival Test 0.26_04 短暂存在 → Notch 因生成异常移除；社区多次提议补回 | 泥土的半砖 | 与原版半砖完全同合成路径（3 个泥土横排），种花/草仍受土质判定；可被铲子改为草半砖 | 同档半砖 | [wiki/Removed features (dirt slab)][r-rmf] |
-| `<lf>:stone_step_legacy` | 旧版石阶 | <img src="./assets/stone_step_legacy.png" width="64"> | Indev 截图 | "矮阶梯"风格石阶 | 第二种石阶外观，**功能与原版石阶完全一致**，可放置高度不同（半格落差用台阶逻辑） | 同档台阶 | [wiki/Java Edition unused features][r-unused] |
-| `<lf>:gear` | 齿轮 | <img src="./assets/gear.png" width="64"> | Alpha 早期方块（Alpha v1.0.1 移除）；后续被作为"红石概念"反复提及 | 可放置但无功能，疑似机关意图 | **方向性红石中继**：信号必须从齿牙缺口侧进入，可顺/逆时针 90° 偏转输出；**不是动力学**，仅信号布线 | 替代红石中继器一种用法 | [wiki/Gear][r-gear] |
-| `<lf>:redstone_lock` | 红石锁 | <img src="./assets/redstone_lock.png" width="64"> | 1.5 红石更新开发讨论 | 多位红石密码锁 | 5 阶 4 位输入锁，输入完成输出 1 tick 脉冲；与漏斗锁等已有方案错位竞争（不可锁箱子，仅作为机关触发） | 不破解原版红石平衡 | [wiki/Redstone Update talk][r-redstone-talk] |
-| `<lf>:legacy_quartz_pillar_swirl` | 旋光石英 | <img src="./assets/legacy_quartz_pillar_swirl.png" width="64"> | 1.5 概念图 | 螺旋石英柱 | 第二种石英柱贴图，同合成同价 | 等价装饰 | [wiki/Java Edition unused features][r-unused] |
-| `<lf>:reed_carpet` | 甘蔗地毯 | <img src="./assets/reed_carpet.png" width="64"> | 1.7 概念图 | 甘蔗织物 | 通过 4 甘蔗合成 1 个"草席地毯"，棕黄色调，**踩踏后给予 4s 慢速 +1**（凉席意象）→ 见 §8 平衡说明 | 仅装饰为主 | [wiki/Java Edition unused features][r-unused] |
-| `<lf>:rusty_iron_door` | 锈铁门 | <img src="./assets/rusty_iron_door.png" width="64"> | 1.6 开发期残留贴图 | 替代铁门的旧贴图 | 替代铁门贴图分支，对 `<lf>:redstone_lock` 信号识别更敏感（连接距离 +4） | 等价铁门 | [wiki/Java Edition unused features][r-unused] |
-| `<lf>:ancient_compass` | 古旧罗盘 | <img src="./assets/ancient_compass.png" width="64"> | 探险更新（1.11）草稿 | 指向特定结构的罗盘 | 在"过去的未来"完成度 ≥ 25% 时获得：指向**最近一个回归结构**（哨塔/反应堆遗迹）；不指向村庄 | 不替代探险家地图 | [wiki/Exploration Update][r-exploration] |
+| `<lf>:dirt_slab` | 泥土半砖 | ![dirt_slab](./assets/dirt_slab.png) | Survival Test 0.26_04 短暂存在 → Notch 因生成异常移除；社区多次提议补回 | 泥土的半砖 | 与原版半砖完全同合成路径（3 个泥土横排），种花/草仍受土质判定；可被铲子改为草半砖 | 同档半砖 | [wiki/Removed features (dirt slab)][r-rmf] |
+| `<lf>:stone_step_legacy` | 旧版石阶 | ![stone_step_legacy](./assets/stone_step_legacy.png) | Indev 截图 | "矮阶梯"风格石阶 | 第二种石阶外观，**功能与原版石阶完全一致**，可放置高度不同（半格落差用台阶逻辑） | 同档台阶 | [wiki/Java Edition unused features][r-unused] |
+| `<lf>:gear` | 齿轮 | ![gear](./assets/gear.png) | Alpha 早期方块（Alpha v1.0.1 移除）；后续被作为"红石概念"反复提及 | 可放置但无功能，疑似机关意图 | **方向性红石中继**：信号必须从齿牙缺口侧进入，可顺/逆时针 90° 偏转输出；**不是动力学**，仅信号布线 | 替代红石中继器一种用法 | [wiki/Gear][r-gear] |
+| `<lf>:redstone_lock` | 红石锁 | ![redstone_lock](./assets/redstone_lock.png) | 1.5 红石更新开发讨论 | 多位红石密码锁 | 5 阶 4 位输入锁，输入完成输出 1 tick 脉冲；与漏斗锁等已有方案错位竞争（不可锁箱子，仅作为机关触发） | 不破解原版红石平衡 | [wiki/Redstone Update talk][r-redstone-talk] |
+| `<lf>:legacy_quartz_pillar_swirl` | 旋光石英 | ![legacy_quartz_pillar_swirl](./assets/legacy_quartz_pillar_swirl.png) | 1.5 概念图 | 螺旋石英柱 | 第二种石英柱贴图，同合成同价 | 等价装饰 | [wiki/Java Edition unused features][r-unused] |
+| `<lf>:reed_carpet` | 甘蔗地毯 | ![reed_carpet](./assets/reed_carpet.png) | 1.7 概念图 | 甘蔗织物 | 通过 4 甘蔗合成 1 个"草席地毯"，棕黄色调，**踩踏后给予 4s 慢速 +1**（凉席意象）→ 见 §8 平衡说明 | 仅装饰为主 | [wiki/Java Edition unused features][r-unused] |
+| `<lf>:rusty_iron_door` | 锈铁门 | ![rusty_iron_door](./assets/rusty_iron_door.png) | 1.6 开发期残留贴图 | 替代铁门的旧贴图 | 替代铁门贴图分支，对 `<lf>:redstone_lock` 信号识别更敏感（连接距离 +4） | 等价铁门 | [wiki/Java Edition unused features][r-unused] |
+| `<lf>:ancient_compass` | 古旧罗盘 | ![ancient_compass](./assets/ancient_compass.png) | 探险更新（1.11）草稿 | 指向特定结构的罗盘 | 在"过去的未来"完成度 ≥ 25% 时获得：指向**最近一个回归结构**（哨塔/反应堆遗迹）；不指向村庄 | 不替代探险家地图 | [wiki/Exploration Update][r-exploration] |
 
 > 完整清单与可关停开关在 `config/<lf>/entries.json`。服主可逐条 `enabled: false`。
 
