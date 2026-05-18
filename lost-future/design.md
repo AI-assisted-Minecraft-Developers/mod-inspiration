@@ -59,36 +59,40 @@ flowchart TD
 
 ### 3.1 曾被移除（A 类）
 
-| ID | 名称 | 来源版本 | 原貌简述 | 本模组中的新作用 | 平衡权重 |
-|---|---|---|---|---|---|
-| `<lf>:human` | 人类 | Survival Test（Classic 0.24） | 主动型类玩家敌人，会持武器追击 | 罕见暮色 mob，掉落"破旧布片"，用于补丁锁链盔甲（见 §4.3）；不掉落经验，不掉装备 | 不优于流浪者 |
-| `<lf>:alpha_pigman` | 阿尔法猪人（粉皮） | Indev 0.31 | Notch 因建模错误产生的"猪头玩家" | 下界**罕见友好** NPC，可用熟猪肉换"古旧地图碎片"，引导至 §4.4 下界塔 | 不掉落实质装备 |
-| `<lf>:legacy_zombie_pigman` | 旧版僵尸猪人 | 1.0–1.15 | 中立、群体复仇 | 受击复仇半径恢复**仅限本模组维度 / 结构内**生效；主世界与下界保持当前版本 piglin 行为不变 | 与现版 piglin 互不替换 |
-| `<lf>:rana` | Rana | 红石更新 PR | 玩家测试用 mob，绿头巾僧人 | 极罕见村民变种，**只接受附魔书与音乐唱片**交易，给"被遗忘的菜谱" | 单存档限刷 1 次 |
-| `<lf>:steve_monster` | Steve 怪 | Survival Test | 主玩家模型的敌对版本 | 仅在"过去的未来"完成度 ≥ 50% 后**作为成就 boss 出现一次**；掉落 §4.7 收集相册 | 一次性 boss |
-| `<lf>:giant` | Giant 巨型僵尸 | Classic | 巨型僵尸，原已存在但 AI 缺失 | 给现有 `minecraft:giant` 注入 AI + 罕见结构刷怪，掉落"远古牙骨" | 走结构刷新，不入野外随机 |
-| `<lf>:ruby` | 红宝石 | 12w21a 测试 | 山民交易货币原型，后被绿宝石替代 | 与绿宝石**平行**的"古商人货币"，仅 §3.3 的废弃哨塔商人接受；可合成回归首饰链 | 不可与绿宝石互转 |
-| `<lf>:camera` | 相机 | Indev | 拍照保存 PNG 到 screenshots | **拍照成画**：拍下任意视角，烧制成可挂的"老照片"画作；冷却 60 秒，作品占用画框槽 | 不掉落资源 |
-| `<lf>:blue_china_pot` | 青花瓷器 | 早期愚人节素材 | 装饰陶瓷 | 装饰罐头（可挂染料），**蓄水**版本可作为高级花盆替代品（同尺寸普通花盆 1:1） | 仅装饰 + 容器作用 |
-| `<lf>:legacy_rose` | 旧版玫瑰 | Beta（红色花）| 1.7 被替换为罂粟 | 与罂粟**贴图同价**，但可染**深红**而不是红；用于复古建筑党 | 等价染料 |
-| `<lf>:nether_reactor_core` | 下界反应堆核心 | 基岩传统版 0.5 | 主世界搭建后触发"下界事件" | 见 §4.4，按基岩老逻辑还原结构激活 → 生成临时"下界塔" | 单存档冷却 30 游戏日 |
-| `<lf>:nether_tower` | 下界塔 | 基岩传统版 | 反应堆触发的临时塔 | 临时挑战结构，掉落"过去的未来"专属奖励（青铜剑、远古磁石）| 区块时限 + 结构限刷 |
-| `<lf>:chainmail_ingot_legacy` | 锁链段 | Beta 时代缺合成 | 锁链盔甲无合成 | 通过"破旧布片 + 铁锭"在锻造台合成（见 §4.3）；用于补全锁链盔甲合成链 | 不优于铁甲 |
-| `<lf>:cyan_rose_old` | 蓝色玫瑰（Classic 染料花） | Classic | 早期染料花 | 与矢车菊**贴图同价**的复古版本 | 等价染料 |
-| `<lf>:legacy_lava_floor` | 沉浸式岩浆纹 | Alpha 早期 | 旧岩浆贴图 | 通过"远古拓印板"右键岩浆方块切换贴图（个人客户端层；多人时仅本人可见） | 纯视觉切换 |
+> **参考**列指向 minecraft.wiki 等开源资料；§12 给出完整引用清单。
+
+| ID | 名称 | 来源版本 | 原貌简述 | 本模组中的新作用 | 平衡权重 | 参考 |
+|---|---|---|---|---|---|---|
+| `<lf>:human` | 人类 | Pre-Classic rd-132328 → Survival Test 移除 | 持武器追击玩家的类玩家敌人；Beta 1.6.6 后无法生成 | 罕见暮色 mob，掉落"破旧布片"，用于补全锁链盔甲（见 §4.3）；不掉落经验，不掉装备 | 不优于流浪者 | [wiki/Human][r-human] |
+| `<lf>:alpha_pigman` | 阿尔法猪人（粉皮） | Indev / Halloween Update 前期 | Notch 建模错误产物的"猪头玩家"；后演化为僵尸猪人 | 下界**罕见友好** NPC，可用熟猪肉换"古旧地图碎片"，引导至 §4.4 下界塔 | 不掉落实质装备 | [wiki/Pigman][r-pigman] |
+| `<lf>:legacy_zombie_pigman` | 旧版僵尸猪人 | 1.0–1.15 → 1.16 替换为 piglin | 中立、群体复仇 | 受击复仇半径恢复**仅限本模组维度 / 结构内**生效；主世界与下界保持当前版本 piglin 行为不变 | 与现版 piglin 互不替换 | [wiki/Zombified_Piglin][r-zpig] |
+| `<lf>:rana` | Rana | Indev MD3 阶段（Dock 离开后移除） | 玩家测试用 mob，绿头巾僧人 | 极罕见村民变种，**只接受附魔书与音乐唱片**交易，给"被遗忘的菜谱" | 单存档限刷 1 次 | [wiki/Rana][r-rana] |
+| `<lf>:steve_monster` | Steve 怪 | Indev MD3 阶段 | 主玩家模型的敌对版本 | 仅在"过去的未来"完成度 ≥ 50% 后**作为成就 boss 出现一次**；掉落 §4.7 收集相册 | 一次性 boss | [wiki/Steve_(mob)][r-stevemob] |
+| `<lf>:giant` | Giant 巨型僵尸 | Classic / Indev（无 AI 残留至今） | 巨型僵尸，Notch "太 OP"未启用 | 给现有 `minecraft:giant` 注入 AI + 罕见结构刷怪，掉落"远古牙骨" | 走结构刷新，不入野外随机 | [wiki/Giant][r-giant] |
+| `<lf>:ruby` | 红宝石 | Java 12w21a 快照 → 12w21b 被绿宝石替换 | 山民交易货币原型，items.png 中残留贴图 | 与绿宝石**平行**的"古商人货币"，仅 §3.3 的废弃哨塔商人接受；可合成回归首饰链 | 不可与绿宝石互转 | [wiki/Ruby][r-ruby] |
+| `<lf>:camera` | 相机 | Indev（截图存档功能） | 按下拍照保存 PNG 到 screenshots | **拍照成画**：拍下任意视角，烧制成可挂的"老照片"画作；冷却 60 秒，作品占用画框槽 | 不掉落资源 | [wiki/Camera][r-camera] |
+| `<lf>:blue_china_pot` | 青花瓷器 | Halloween 2010 / 早期愚人节素材 | 装饰陶瓷 | 装饰罐头（可挂染料），**蓄水**版本可作为高级花盆替代品（同尺寸普通花盆 1:1） | 仅装饰 + 容器作用 | [wiki/Unused_features][r-unused] |
+| `<lf>:legacy_rose` | 旧版玫瑰 | Beta–1.6 → 1.7.2 (13w36a) 被替换为罂粟 | Java 红色花，染深红 | 与罂粟**贴图同价**，但可染**深红**而不是红；用于复古建筑党 | 等价染料 | [wiki/Poppy][r-poppy] · [wiki/Rose render history][r-rose-render] |
+| `<lf>:nether_reactor_core` | 下界反应堆核心 | 基岩传统版 0.5 → alpha v0.12.1 移除 | 主世界搭建 3×3×3 框架后触发"下界事件" | 见 §4.4，按基岩老逻辑还原结构激活 → 生成临时"下界塔" | 单存档冷却 30 游戏日 | [wiki/Nether_Reactor_Core][r-reactor-core] |
+| `<lf>:nether_tower` | 下界塔（Nether Spire） | 基岩传统版 | 反应堆触发的临时塔，落下原本稀有的物品 | 临时挑战结构，掉落"过去的未来"专属奖励（青铜剑、远古磁石）| 区块时限 + 结构限刷 | [wiki/Nether_Reactor][r-reactor] |
+| `<lf>:chainmail_ingot_legacy` | 锁链段 | Beta 时代缺合成 | 锁链盔甲长期无生存合成 | 通过"破旧布片 + 铁锭"在锻造台合成（见 §4.3）；用于补全锁链盔甲合成链 | 不优于铁甲 | [wiki/Chainmail_Armor][r-chain] |
+| `<lf>:cyan_rose_old` | 蓝色玫瑰（Classic 染料花） | Classic | 早期染料花 | 与矢车菊**贴图同价**的复古版本 | 等价染料 | [wiki/Cyan_Rose][r-cyanrose] |
+| `<lf>:legacy_lava_floor` | 沉浸式岩浆纹 | Alpha 早期 | 旧岩浆贴图 | 通过"远古拓印板"右键岩浆方块切换贴图（个人客户端层；多人时仅本人可见） | 纯视觉切换 | [wiki/Lava texture history][r-lavatex] |
 
 ### 3.2 提及未实装（B 类）
 
-| ID | 名称 | 提及来源 | 原貌 | 本模组中的新作用 | 平衡权重 |
-|---|---|---|---|---|---|
-| `<lf>:dirt_slab` | 泥土半砖 | Notch 早期推文 | 泥土的半砖 | 与原版半砖完全同合成路径（3 个泥土横排），种花/草仍受土质判定；可被铲子改为草半砖 | 同档半砖 |
-| `<lf>:stone_step_legacy` | 旧版石阶 | Indev 截图泄露 | "矮阶梯"风格石阶 | 第二种石阶外观，**功能与原版石阶完全一致**，可放置高度不同（半格落差用台阶逻辑） | 同档台阶 |
-| `<lf>:gear` | 齿轮 | Jeb 推特 demo | 红石组件原型 | **方向性红石中继**：信号必须从齿牙缺口侧进入，可顺/逆时针 90° 偏转输出；**不是动力学**，仅信号布线 | 替代红石中继器一种用法 |
-| `<lf>:redstone_lock` | 红石锁 | 1.5 开发笔记 | 红石密码锁 | 5 阶 4 位输入锁，输入完成输出 1 tick 脉冲；与漏斗锁等已有方案错位竞争（不可锁箱子，仅作为机关触发） | 不破解原版红石平衡 |
-| `<lf>:legacy_quartz_pillar_swirl` | 旋光石英 | 1.5 概念图 | 螺旋石英柱 | 第二种石英柱贴图，同合成同价 | 等价装饰 |
-| `<lf>:reed_carpet` | 甘蔗地毯 | 1.7 概念图 | 甘蔗织物 | 通过 4 甘蔗合成 1 个"草席地毯"，棕黄色调，**踩踏后给予 4s 慢速 +1**（凉席意象）→ 见 §8 平衡说明 | 仅装饰为主 |
-| `<lf>:rusty_iron_door` | 锈铁门 | 1.6 开发期残留贴图 | 替代铁门的旧贴图 | 替代铁门贴图分支，对 `<lf>:redstone_lock` 信号识别更敏感（连接距离 +4） | 等价铁门 |
-| `<lf>:ancient_compass` | 古旧罗盘 | 探险更新草稿 | 指向特定结构的罗盘 | 在"过去的未来"完成度 ≥ 25% 时获得：指向**最近一个回归结构**（哨塔/反应堆遗迹）；不指向村庄 | 不替代探险家地图 |
+> B 类条目大多没有可直接引用的官方贴图。**短期内**采用"原版风格 + 文字描述"，**v0.2 计划**用 gpt-image 生成 16×16 / 32×32 概念图并放入 `assets/`（本次提交因 LiteLLM 中转的 gpt-image-2 端点报错，未能落地，见 §9.8）。每条都尽量给一个 wiki / 推文级别的来源。
+
+| ID | 名称 | 提及来源 | 原貌 | 本模组中的新作用 | 平衡权重 | 参考 |
+|---|---|---|---|---|---|---|
+| `<lf>:dirt_slab` | 泥土半砖 | Survival Test 0.26_04 短暂存在 → Notch 因生成异常移除；社区多次提议补回 | 泥土的半砖 | 与原版半砖完全同合成路径（3 个泥土横排），种花/草仍受土质判定；可被铲子改为草半砖 | 同档半砖 | [wiki/Removed features (dirt slab)][r-rmf] |
+| `<lf>:stone_step_legacy` | 旧版石阶 | Indev 截图 | "矮阶梯"风格石阶 | 第二种石阶外观，**功能与原版石阶完全一致**，可放置高度不同（半格落差用台阶逻辑） | 同档台阶 | [wiki/Java Edition unused features][r-unused] |
+| `<lf>:gear` | 齿轮 | Alpha 早期方块（Alpha v1.0.1 移除）；后续被作为"红石概念"反复提及 | 可放置但无功能，疑似机关意图 | **方向性红石中继**：信号必须从齿牙缺口侧进入，可顺/逆时针 90° 偏转输出；**不是动力学**，仅信号布线 | 替代红石中继器一种用法 | [wiki/Gear][r-gear] |
+| `<lf>:redstone_lock` | 红石锁 | 1.5 红石更新开发讨论 | 多位红石密码锁 | 5 阶 4 位输入锁，输入完成输出 1 tick 脉冲；与漏斗锁等已有方案错位竞争（不可锁箱子，仅作为机关触发） | 不破解原版红石平衡 | [wiki/Redstone Update talk][r-redstone-talk] |
+| `<lf>:legacy_quartz_pillar_swirl` | 旋光石英 | 1.5 概念图 | 螺旋石英柱 | 第二种石英柱贴图，同合成同价 | 等价装饰 | [wiki/Java Edition unused features][r-unused] |
+| `<lf>:reed_carpet` | 甘蔗地毯 | 1.7 概念图 | 甘蔗织物 | 通过 4 甘蔗合成 1 个"草席地毯"，棕黄色调，**踩踏后给予 4s 慢速 +1**（凉席意象）→ 见 §8 平衡说明 | 仅装饰为主 | [wiki/Java Edition unused features][r-unused] |
+| `<lf>:rusty_iron_door` | 锈铁门 | 1.6 开发期残留贴图 | 替代铁门的旧贴图 | 替代铁门贴图分支，对 `<lf>:redstone_lock` 信号识别更敏感（连接距离 +4） | 等价铁门 | [wiki/Java Edition unused features][r-unused] |
+| `<lf>:ancient_compass` | 古旧罗盘 | 探险更新（1.11）草稿 | 指向特定结构的罗盘 | 在"过去的未来"完成度 ≥ 25% 时获得：指向**最近一个回归结构**（哨塔/反应堆遗迹）；不指向村庄 | 不替代探险家地图 | [wiki/Exploration Update][r-exploration] |
 
 > 完整清单与可关停开关在 `config/<lf>/entries.json`。服主可逐条 `enabled: false`。
 
@@ -146,15 +150,20 @@ flowchart TD
 
 ### 4.4 下界反应堆复刻
 
-按基岩传统版 0.5 的原始逻辑还原，**仅在玩家"过去的未来"完成度 ≥ 10% 时**才可激活：
+按基岩传统版 0.5 的原始逻辑（[wiki/Nether_Reactor][r-reactor]）还原，**仅在玩家"过去的未来"完成度 ≥ 10% 时**才可激活：
 
-**结构模板**（4×4×3，俯视）：
+**结构模板**（与基岩老版一致：3×3×3，4 个金块在角、4 个圆石在边、核心居中，上下两层中央保持空气）：
 
 ```
-. R R .       R = 圆石
-R C R     ←   C = <lf>:nether_reactor_core
-. R R .       (顶层和底层为圆石框架)
+底层（y=0）         中层（y=1，核心层）   顶层（y=2）
+G . G              . . .                G . G
+. R .              . C .                . R .
+G . G              . . .                G . G
+
+R = 圆石   G = 金块   C = <lf>:nether_reactor_core   . = 空气
 ```
+
+> 参考：[wiki/Nether_Reactor_Core][r-reactor-core] —— 原版需 4 金块、4 圆石、1 核心，俯视为 3×3，纵向 3 层，上下中央留空形成"反应室"。
 
 **激活流程**：
 
@@ -163,9 +172,9 @@ R C R     ←   C = <lf>:nether_reactor_core
 3. 进入 45 秒"激活相位"：
    - 半径 32 格内天空变下界天，环境音效切换
    - 大量僵尸猪人 / 烈焰人 / 末影人**临时**刷出
-   - 中心位置生成临时 **`<lf>:nether_tower`** 结构（约 9×9×24 高，由旧版下界砖与古铜方块构成）
-4. 45 秒后核心熔解为 `<lf>:scorched_core`（不可重新激活），塔保留 5 分钟可探索，5 分钟后**塔与其内容物全部消散**——玩家**必须在 5 分钟内**带走战利品
-5. 战利品池（每次刷新 1–2 件）：青铜剑、远古磁石、`<lf>:legacy_camera_film`、若干红宝石
+   - 中心位置生成临时 **`<lf>:nether_tower`**（参考基岩老版的 Nether Spire 形态：约 9×9×24 高，由旧版下界砖与古铜方块构成）
+4. 45 秒后核心熔解为 `<lf>:scorched_core`（不可重新激活，对应老版"glowing obsidian"语义），塔保留 5 分钟可探索，5 分钟后**塔与其内容物全部消散**——玩家**必须在 5 分钟内**带走战利品
+5. 战利品池（每次刷新 1–2 件）：青铜剑、远古磁石、`<lf>:legacy_camera_film`、若干红宝石（对照老版的 glowstone dust / Nether quartz / 仙人掌 / 甘蔗 / 蘑菇 / 种子组合，本模组按"古风奖励"重铸）
 
 **冷却**：单玩家 30 游戏日；多人按玩家个体计算。
 
@@ -381,6 +390,7 @@ ItemEvents.crafted(event => {
 5. **Patchouli 章节是否硬依赖**——首选软依赖，缺失时退化为聊天框 `/help <lf>` 列出条目；**待决定**：是否打包内置 Patchouli 兼容 mod。
 6. **进度树"100% 完成"奖励膨胀**——若服主开启所有可选条目（≥ 50 项），100% 难度过高；**计划**：完成度计算只看**首发 23 项核心条目**，服主增加的额外条目不参与百分比统计。
 7. **多语言文案考据**——大量条目涉及历史版本术语，需对照 Minecraft Wiki 与官方推文截图，避免被社区考据党挑刺；**短期**：首发简中 + 英文，由社区贡献其它语言。
+8. **概念图缺位（v0.1 已知短板）**——本设计稿首版**未附概念图**。计划用 gpt-image-2 为 B 类（提及未实装）的 8 个条目分别生成 16×16 / 32×32 概念图，放在 `lost-future/assets/<entry>.png` 并在 §3 表格中嵌入。本次提交尝试调用本仓库可用的 LiteLLM 中转端点（`/v1/images/generations` 与 `/v1/responses`），均返回 `Tool choice 'image_generation' not found in 'tools' parameter`，疑为该 relay 对 gpt-image-2 的路由配置 bug；**待研究**：换用直连 OpenAI key、或修复 relay 后补图，**不阻塞设计稿合并**。
 
 ---
 
@@ -409,3 +419,89 @@ ItemEvents.crafted(event => {
 - **跨 mod 考古联动**：检测到怀旧 / 老版本 mod 时，把对方的内容也纳入"过去的未来"进度树（需对方同意 + tag 对接）
 - **教育模式**：每个进度节点附带"该内容为什么被砍 / 为什么没做"的开发史小卡片，鼓励玩家用 Patchouli 阅读
 - **Mojang 新废案订阅**：远期可做一个"在线 entries 池"，当 Mojang 又有新的废案曝光时，社区贡献后端通过 datapack 推送更新（需严格审核）
+
+---
+
+## 12. 参考资料（开源 / 可引用）
+
+所有引用均来自 **minecraft.wiki**（CC BY-NC-SA 3.0 兼容许可，社区维护，可作为设计稿的考据底）；如条目同时在 Fandom 镜像 / minecraft-archive 中存在更老的考古图，会在条目后另注。**贴图素材本身不直接复制进本模组——会按"原版风格重绘"以避免许可争议**（见 §9.1）。
+
+### 12.1 A 类（曾被移除）
+
+| 标签 | 链接 | 说明 |
+|---|---|---|
+| `r-human` | <https://minecraft.wiki/w/Human> | Human (mob) |
+| `r-pigman` | <https://minecraft.wiki/w/Pigman> | Pigman / Alpha Pigman |
+| `r-zpig` | <https://minecraft.wiki/w/Zombified_Piglin> | Zombified Piglin（旧称 Zombie Pigman） |
+| `r-rana` | <https://minecraft.wiki/w/Rana> | Rana（Indev MD3 mob） |
+| `r-stevemob` | <https://minecraft.wiki/w/Steve_(mob)> | Steve（Indev MD3 mob） |
+| `r-giant` | <https://minecraft.wiki/w/Giant> | Giant |
+| `r-ruby` | <https://minecraft.wiki/w/Ruby> | Ruby（12w21a） |
+| `r-camera` | <https://minecraft.wiki/w/Camera> | Camera（Indev） |
+| `r-unused` | <https://minecraft.wiki/w/Java_Edition_unused_features> | Java Edition unused features |
+| `r-poppy` | <https://minecraft.wiki/w/Poppy> | Poppy（1.7.2 / 13w36a 替换 Rose） |
+| `r-rose-render` | <https://minecraft.wiki/w/Java_Edition_block_render_history/Rose> | Rose 渲染历史 |
+| `r-reactor-core` | <https://minecraft.wiki/w/Nether_Reactor_Core> | Nether Reactor Core |
+| `r-reactor` | <https://minecraft.wiki/w/Nether_Reactor> | Nether Reactor（基岩传统版 0.5） |
+| `r-chain` | <https://minecraft.wiki/w/Chainmail_Armor> | Chainmail Armor（历史上无生存合成） |
+| `r-cyanrose` | <https://minecraft.wiki/w/Cyan_Rose> | Cyan Rose（Classic 染料花） |
+| `r-lavatex` | <https://minecraft.wiki/w/Java_Edition_block_render_history/Lava> | Lava 贴图历史 |
+
+### 12.2 B 类（提及未实装）
+
+| 标签 | 链接 | 说明 |
+|---|---|---|
+| `r-rmf` | <https://minecraft.wiki/w/Java_Edition_removed_features> | Java Edition removed features（含 dirt slab 段落） |
+| `r-gear` | <https://minecraft.wiki/w/Gear> | Gear（Alpha v1.0.1 移除前的方块） |
+| `r-redstone-talk` | <https://minecraft.wiki/w/Talk:Redstone_Update> | Redstone Update 讨论页（含红石锁讨论） |
+| `r-exploration` | <https://minecraft.wiki/w/Exploration_Update> | Exploration Update（1.11，含古旧罗盘草稿语义） |
+
+<!-- markdown reference-style link definitions for §3 tables -->
+[r-human]: https://minecraft.wiki/w/Human
+[r-pigman]: https://minecraft.wiki/w/Pigman
+[r-zpig]: https://minecraft.wiki/w/Zombified_Piglin
+[r-rana]: https://minecraft.wiki/w/Rana
+[r-stevemob]: https://minecraft.wiki/w/Steve_(mob)
+[r-giant]: https://minecraft.wiki/w/Giant
+[r-ruby]: https://minecraft.wiki/w/Ruby
+[r-camera]: https://minecraft.wiki/w/Camera
+[r-unused]: https://minecraft.wiki/w/Java_Edition_unused_features
+[r-poppy]: https://minecraft.wiki/w/Poppy
+[r-rose-render]: https://minecraft.wiki/w/Java_Edition_block_render_history/Rose
+[r-reactor-core]: https://minecraft.wiki/w/Nether_Reactor_Core
+[r-reactor]: https://minecraft.wiki/w/Nether_Reactor
+[r-chain]: https://minecraft.wiki/w/Chainmail_Armor
+[r-cyanrose]: https://minecraft.wiki/w/Cyan_Rose
+[r-lavatex]: https://minecraft.wiki/w/Java_Edition_block_render_history/Lava
+[r-rmf]: https://minecraft.wiki/w/Java_Edition_removed_features
+[r-gear]: https://minecraft.wiki/w/Gear
+[r-redstone-talk]: https://minecraft.wiki/w/Talk:Redstone_Update
+[r-exploration]: https://minecraft.wiki/w/Exploration_Update
+
+### 12.3 二级 / 辅助参考
+
+| 资料 | 用途 |
+|---|---|
+| [Minecraft Discontinued Features Wiki](https://mcdf.wiki.gg/) | 基岩 0.5–0.12.1 反应堆塔的旧版截图最全；多张可作为塔结构概念图参照 |
+| [minecraft-archive.fandom.com](https://minecraft-archive.fandom.com/) | 早期 mob（Black Steve、Beast Boy）的社区考古截图 |
+| [Java Edition removed entities](https://minecraft.wiki/w/Java_Edition_removed_entities) | A 类生物的统一索引页 |
+| 官方推特 [@jeb_](https://x.com/jeb_) 历史推文 | 齿轮 / 红石锁等"未实装概念"原始口径来源；本稿仅做行为复述，不内嵌截图 |
+
+### 12.4 概念图素材计划（v0.2 ToDo）
+
+| 条目 | 是否有官方/社区图可参照 | 来源 | v0.2 计划 |
+|---|---|---|---|
+| `<lf>:human` | 有 | wiki/Human 截图 | 重绘 16×16 像素 |
+| `<lf>:alpha_pigman` | 有 | wiki/Pigman 截图 | 重绘 16×16 像素 |
+| `<lf>:ruby` | 有 | 12w21a items.png 残留贴图 | 重绘（避免直接复制） |
+| `<lf>:nether_reactor_core` | 有 | wiki/Nether_Reactor_Core 渲染图 | 重绘 16×16 像素 |
+| `<lf>:nether_tower` | 有 | mcdf.wiki.gg 老版截图 | 重绘 isometric 概念图 |
+| `<lf>:gear` | **无官方图** | 仅 Jeb 早期方块（贴图模糊） | **gpt-image 生成** |
+| `<lf>:redstone_lock` | **无** | 纯讨论页文字 | **gpt-image 生成** |
+| `<lf>:dirt_slab` | **无**（Survival Test 时代无截图） | 推文 + 社区 mockup | **gpt-image 生成** |
+| `<lf>:reed_carpet` | **无** | 1.7 概念草稿 | **gpt-image 生成** |
+| `<lf>:rusty_iron_door` | **无** | 1.6 残留贴图（已找不到原图） | **gpt-image 生成** |
+| `<lf>:ancient_compass` | **无** | 1.11 草稿 | **gpt-image 生成** |
+| 其余 B 类（旋光石英、旧石阶） | 无 | — | **gpt-image 生成** |
+
+> 落地时 `lost-future/assets/<entry>.png` 全部按原版色板（16 色 / 32 色）出图，避免与 Mojang 美术资产产生许可争议。
