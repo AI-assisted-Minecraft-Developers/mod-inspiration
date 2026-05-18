@@ -81,18 +81,18 @@ flowchart TD
 
 ### 3.2 提及未实装（B 类）
 
-> B 类条目大多没有可直接引用的官方贴图。**短期内**采用"原版风格 + 文字描述"，**v0.2 计划**用 gpt-image 生成 16×16 / 32×32 概念图并放入 `assets/`（本次提交因 LiteLLM 中转的 gpt-image-2 端点报错，未能落地，见 §9.8）。每条都尽量给一个 wiki / 推文级别的来源。
+> B 类条目大多没有可直接引用的官方贴图，每条均**用 gpt-image-2 生成原版风格概念图**（位于 `assets/`），仅作为设计稿插图，**落地时按原版色板 16×16 / 32×32 重绘**。每条都尽量给一个 wiki / 推文级别的来源。
 
-| ID | 名称 | 提及来源 | 原貌 | 本模组中的新作用 | 平衡权重 | 参考 |
-|---|---|---|---|---|---|---|
-| `<lf>:dirt_slab` | 泥土半砖 | Survival Test 0.26_04 短暂存在 → Notch 因生成异常移除；社区多次提议补回 | 泥土的半砖 | 与原版半砖完全同合成路径（3 个泥土横排），种花/草仍受土质判定；可被铲子改为草半砖 | 同档半砖 | [wiki/Removed features (dirt slab)][r-rmf] |
-| `<lf>:stone_step_legacy` | 旧版石阶 | Indev 截图 | "矮阶梯"风格石阶 | 第二种石阶外观，**功能与原版石阶完全一致**，可放置高度不同（半格落差用台阶逻辑） | 同档台阶 | [wiki/Java Edition unused features][r-unused] |
-| `<lf>:gear` | 齿轮 | Alpha 早期方块（Alpha v1.0.1 移除）；后续被作为"红石概念"反复提及 | 可放置但无功能，疑似机关意图 | **方向性红石中继**：信号必须从齿牙缺口侧进入，可顺/逆时针 90° 偏转输出；**不是动力学**，仅信号布线 | 替代红石中继器一种用法 | [wiki/Gear][r-gear] |
-| `<lf>:redstone_lock` | 红石锁 | 1.5 红石更新开发讨论 | 多位红石密码锁 | 5 阶 4 位输入锁，输入完成输出 1 tick 脉冲；与漏斗锁等已有方案错位竞争（不可锁箱子，仅作为机关触发） | 不破解原版红石平衡 | [wiki/Redstone Update talk][r-redstone-talk] |
-| `<lf>:legacy_quartz_pillar_swirl` | 旋光石英 | 1.5 概念图 | 螺旋石英柱 | 第二种石英柱贴图，同合成同价 | 等价装饰 | [wiki/Java Edition unused features][r-unused] |
-| `<lf>:reed_carpet` | 甘蔗地毯 | 1.7 概念图 | 甘蔗织物 | 通过 4 甘蔗合成 1 个"草席地毯"，棕黄色调，**踩踏后给予 4s 慢速 +1**（凉席意象）→ 见 §8 平衡说明 | 仅装饰为主 | [wiki/Java Edition unused features][r-unused] |
-| `<lf>:rusty_iron_door` | 锈铁门 | 1.6 开发期残留贴图 | 替代铁门的旧贴图 | 替代铁门贴图分支，对 `<lf>:redstone_lock` 信号识别更敏感（连接距离 +4） | 等价铁门 | [wiki/Java Edition unused features][r-unused] |
-| `<lf>:ancient_compass` | 古旧罗盘 | 探险更新（1.11）草稿 | 指向特定结构的罗盘 | 在"过去的未来"完成度 ≥ 25% 时获得：指向**最近一个回归结构**（哨塔/反应堆遗迹）；不指向村庄 | 不替代探险家地图 | [wiki/Exploration Update][r-exploration] |
+| ID | 名称 | 概念图 | 提及来源 | 原貌 | 本模组中的新作用 | 平衡权重 | 参考 |
+|---|---|---|---|---|---|---|---|
+| `<lf>:dirt_slab` | 泥土半砖 | <img src="./assets/dirt_slab.png" width="64"> | Survival Test 0.26_04 短暂存在 → Notch 因生成异常移除；社区多次提议补回 | 泥土的半砖 | 与原版半砖完全同合成路径（3 个泥土横排），种花/草仍受土质判定；可被铲子改为草半砖 | 同档半砖 | [wiki/Removed features (dirt slab)][r-rmf] |
+| `<lf>:stone_step_legacy` | 旧版石阶 | <img src="./assets/stone_step_legacy.png" width="64"> | Indev 截图 | "矮阶梯"风格石阶 | 第二种石阶外观，**功能与原版石阶完全一致**，可放置高度不同（半格落差用台阶逻辑） | 同档台阶 | [wiki/Java Edition unused features][r-unused] |
+| `<lf>:gear` | 齿轮 | <img src="./assets/gear.png" width="64"> | Alpha 早期方块（Alpha v1.0.1 移除）；后续被作为"红石概念"反复提及 | 可放置但无功能，疑似机关意图 | **方向性红石中继**：信号必须从齿牙缺口侧进入，可顺/逆时针 90° 偏转输出；**不是动力学**，仅信号布线 | 替代红石中继器一种用法 | [wiki/Gear][r-gear] |
+| `<lf>:redstone_lock` | 红石锁 | <img src="./assets/redstone_lock.png" width="64"> | 1.5 红石更新开发讨论 | 多位红石密码锁 | 5 阶 4 位输入锁，输入完成输出 1 tick 脉冲；与漏斗锁等已有方案错位竞争（不可锁箱子，仅作为机关触发） | 不破解原版红石平衡 | [wiki/Redstone Update talk][r-redstone-talk] |
+| `<lf>:legacy_quartz_pillar_swirl` | 旋光石英 | <img src="./assets/legacy_quartz_pillar_swirl.png" width="64"> | 1.5 概念图 | 螺旋石英柱 | 第二种石英柱贴图，同合成同价 | 等价装饰 | [wiki/Java Edition unused features][r-unused] |
+| `<lf>:reed_carpet` | 甘蔗地毯 | <img src="./assets/reed_carpet.png" width="64"> | 1.7 概念图 | 甘蔗织物 | 通过 4 甘蔗合成 1 个"草席地毯"，棕黄色调，**踩踏后给予 4s 慢速 +1**（凉席意象）→ 见 §8 平衡说明 | 仅装饰为主 | [wiki/Java Edition unused features][r-unused] |
+| `<lf>:rusty_iron_door` | 锈铁门 | <img src="./assets/rusty_iron_door.png" width="64"> | 1.6 开发期残留贴图 | 替代铁门的旧贴图 | 替代铁门贴图分支，对 `<lf>:redstone_lock` 信号识别更敏感（连接距离 +4） | 等价铁门 | [wiki/Java Edition unused features][r-unused] |
+| `<lf>:ancient_compass` | 古旧罗盘 | <img src="./assets/ancient_compass.png" width="64"> | 探险更新（1.11）草稿 | 指向特定结构的罗盘 | 在"过去的未来"完成度 ≥ 25% 时获得：指向**最近一个回归结构**（哨塔/反应堆遗迹）；不指向村庄 | 不替代探险家地图 | [wiki/Exploration Update][r-exploration] |
 
 > 完整清单与可关停开关在 `config/<lf>/entries.json`。服主可逐条 `enabled: false`。
 
@@ -390,7 +390,8 @@ ItemEvents.crafted(event => {
 5. **Patchouli 章节是否硬依赖**——首选软依赖，缺失时退化为聊天框 `/help <lf>` 列出条目；**待决定**：是否打包内置 Patchouli 兼容 mod。
 6. **进度树"100% 完成"奖励膨胀**——若服主开启所有可选条目（≥ 50 项），100% 难度过高；**计划**：完成度计算只看**首发 23 项核心条目**，服主增加的额外条目不参与百分比统计。
 7. **多语言文案考据**——大量条目涉及历史版本术语，需对照 Minecraft Wiki 与官方推文截图，避免被社区考据党挑刺；**短期**：首发简中 + 英文，由社区贡献其它语言。
-8. **概念图缺位（v0.1 已知短板）**——本设计稿首版**未附概念图**。计划用 gpt-image-2 为 B 类（提及未实装）的 8 个条目分别生成 16×16 / 32×32 概念图，放在 `lost-future/assets/<entry>.png` 并在 §3 表格中嵌入。本次提交尝试调用本仓库可用的 LiteLLM 中转端点（`/v1/images/generations` 与 `/v1/responses`），均返回 `Tool choice 'image_generation' not found in 'tools' parameter`，疑为该 relay 对 gpt-image-2 的路由配置 bug；**待研究**：换用直连 OpenAI key、或修复 relay 后补图，**不阻塞设计稿合并**。
+8. **A 类条目的概念图补全**——本稿已为 B 类全部 7 条用 gpt-image-2 生成插图（见 §3.2 表格内嵌缩略图，源 PNG 在 `assets/`）。A 类条目（人类、阿尔法猪人、红宝石、反应堆核心、下界塔等）目前指向 minecraft.wiki 原图；**v0.2 计划**用 gpt-image-2 按原版风格重绘对应贴图入 `assets/`，避免直接复制 Mojang 美术资产产生许可争议。
+9. **LiteLLM relay 的 `gpt-image-2` 路由调参**——relay 默认不带 `tool_choice="auto"` 时会卡在 `Tool choice 'image_generation' not found in 'tools' parameter`。本稿采用的工作组合是 `tools=[{"type":"image_generation","image_generation":{}}] + tool_choice="auto"`，供后续美术 sprint 复用（脚本见 commit 历史里的 `/tmp/gen_concept.py`，已开 PR 起草）。
 
 ---
 
@@ -487,21 +488,23 @@ ItemEvents.crafted(event => {
 | [Java Edition removed entities](https://minecraft.wiki/w/Java_Edition_removed_entities) | A 类生物的统一索引页 |
 | 官方推特 [@jeb_](https://x.com/jeb_) 历史推文 | 齿轮 / 红石锁等"未实装概念"原始口径来源；本稿仅做行为复述，不内嵌截图 |
 
-### 12.4 概念图素材计划（v0.2 ToDo）
+### 12.4 概念图素材清单
 
-| 条目 | 是否有官方/社区图可参照 | 来源 | v0.2 计划 |
+| 条目 | 类型 | 状态 | 路径 / 来源 |
 |---|---|---|---|
-| `<lf>:human` | 有 | wiki/Human 截图 | 重绘 16×16 像素 |
-| `<lf>:alpha_pigman` | 有 | wiki/Pigman 截图 | 重绘 16×16 像素 |
-| `<lf>:ruby` | 有 | 12w21a items.png 残留贴图 | 重绘（避免直接复制） |
-| `<lf>:nether_reactor_core` | 有 | wiki/Nether_Reactor_Core 渲染图 | 重绘 16×16 像素 |
-| `<lf>:nether_tower` | 有 | mcdf.wiki.gg 老版截图 | 重绘 isometric 概念图 |
-| `<lf>:gear` | **无官方图** | 仅 Jeb 早期方块（贴图模糊） | **gpt-image 生成** |
-| `<lf>:redstone_lock` | **无** | 纯讨论页文字 | **gpt-image 生成** |
-| `<lf>:dirt_slab` | **无**（Survival Test 时代无截图） | 推文 + 社区 mockup | **gpt-image 生成** |
-| `<lf>:reed_carpet` | **无** | 1.7 概念草稿 | **gpt-image 生成** |
-| `<lf>:rusty_iron_door` | **无** | 1.6 残留贴图（已找不到原图） | **gpt-image 生成** |
-| `<lf>:ancient_compass` | **无** | 1.11 草稿 | **gpt-image 生成** |
-| 其余 B 类（旋光石英、旧石阶） | 无 | — | **gpt-image 生成** |
+| `<lf>:gear` | B 类 | ✅ 已生成 | `assets/gear.png`（gpt-image-2） |
+| `<lf>:redstone_lock` | B 类 | ✅ 已生成 | `assets/redstone_lock.png`（gpt-image-2） |
+| `<lf>:dirt_slab` | B 类 | ✅ 已生成 | `assets/dirt_slab.png`（gpt-image-2） |
+| `<lf>:reed_carpet` | B 类 | ✅ 已生成 | `assets/reed_carpet.png`（gpt-image-2） |
+| `<lf>:rusty_iron_door` | B 类 | ✅ 已生成 | `assets/rusty_iron_door.png`（gpt-image-2） |
+| `<lf>:ancient_compass` | B 类 | ✅ 已生成 | `assets/ancient_compass.png`（gpt-image-2） |
+| `<lf>:stone_step_legacy` | B 类 | ✅ 已生成 | `assets/stone_step_legacy.png`（gpt-image-2） |
+| `<lf>:legacy_quartz_pillar_swirl` | B 类 | ✅ 已生成 | `assets/legacy_quartz_pillar_swirl.png`（gpt-image-2） |
+| `<lf>:human` | A 类 | ⏳ v0.2 | wiki/Human 截图 → 16×16 重绘 |
+| `<lf>:alpha_pigman` | A 类 | ⏳ v0.2 | wiki/Pigman 截图 → 16×16 重绘 |
+| `<lf>:ruby` | A 类 | ⏳ v0.2 | 12w21a items.png 残留 → 重绘（避免直接复制） |
+| `<lf>:nether_reactor_core` | A 类 | ⏳ v0.2 | wiki/Nether_Reactor_Core 渲染图 → 重绘 |
+| `<lf>:nether_tower` | A 类 | ⏳ v0.2 | mcdf.wiki.gg 老版截图 → isometric 概念图 |
+| 其它 A 类（Rana / Steve 怪 / Giant / Camera / 旧玫瑰 / 蓝玫瑰 / 旧岩浆 / 青花 / 锁链段） | A 类 | ⏳ v0.2 | 参考 wiki 原图，按原版色板重绘 |
 
-> 落地时 `lost-future/assets/<entry>.png` 全部按原版色板（16 色 / 32 色）出图，避免与 Mojang 美术资产产生许可争议。
+> 当前 B 类 8 张均为 gpt-image-2 直出的概念稿（PNG 1024×1024），仅作为设计稿插图；落地时 `lost-future/assets/<entry>.png` 全部按原版色板（16 色 / 32 色）正式重绘，避免与 Mojang 美术资产产生许可争议。
