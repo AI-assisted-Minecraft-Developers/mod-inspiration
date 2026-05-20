@@ -12,6 +12,9 @@
 
 ## 0. 一句话定位
 
+![千味市集大全景](./assets/bazaar-overview.png)
+<p align="center"><sub>千味市集 · 黄昏时分的中心广场（概念图，AI 生成）</sub></p>
+
 一个**临时维度**，通过偶发的"香料门"召集玩家进入；门内是一座由 NPC 商队经营的丝绸之路风格集市，**以物易物**为主，配合自有货币"香料印记"作中转，每个摊主有当日偏好；恶意攻击商队会触发驱逐、黑名单与赎罪机制。
 
 设计意图是**给玩家的稀有物品提供一个二级市场**——给探索/魔法/料理玩家一个"我有一堆稀奇物可以兑换什么"的出口。市集自带封闭的"香料印记"经济。
@@ -117,6 +120,9 @@ flowchart TD
 
 **香料门外观**：2×3 的彩色帐幕方块（`<sb>:caravan_curtain`），自带粒子和音效。右键穿入维度。
 
+![香料门](./assets/spice-gate.png)
+<p align="center"><sub>香料门 · 沙丘黄昏出现的 2×3 帐幕入口（概念图，AI 生成）</sub></p>
+
 **"香料契约"补偿**：
 
 - 玩家**首次进入世界次日**自动获得 1 张 `<sb>:caravan_contract`（一次性，强制下次开市出现在身边 50 格内）
@@ -175,6 +181,9 @@ flowchart TD
 **物品价值边际递减**：同一物品同轮第 10 个起 `marks` 砍半，第 30 个起再砍半，避免低价物刷分。
 
 ### 4.3 交易交互
+
+![摊主交易场景](./assets/stall-trading.png)
+<p align="center"><sub>摊主交易场景 · 玩家与"调味之主"对位（概念图，AI 生成）</sub></p>
 
 **摊主是一个不可移动的实体**（自定义 `<sb>:stall_master`），右键打开自定义 GUI：
 
@@ -299,6 +308,9 @@ flowchart TD
 
 #### 4.8.1 沙盗团（Dune Raiders）
 
+![沙盗团群像](./assets/dune-raiders.png)
+<p align="center"><sub>沙盗团群像 · 左 Dune Marauder / 中 Dune Slinger / 右 Sand Oracle（概念图，AI 生成）</sub></p>
+
 灵感对标：原版 illager（pillager / vindicator / evoker / ravager），主题改为荒漠商队劫匪。所有沙盗共用 `<sb>:raiders` 实体 tag，便于战利品配置与 datapack 扩展。
 
 | ID | 等级 | 仿照对象 | HP | 攻击 | 行为特征 | 主要掉落 |
@@ -322,6 +334,9 @@ flowchart TD
 - 沙盗对**摊主、护卫、玩家**都视为敌对，对村民、铁傀儡等原版生物无敌意
 
 #### 4.8.2 沙盗袭击事件（Raid Event）
+
+![沙盗袭击事件](./assets/raid-event.png)
+<p align="center"><sub>沙盗袭击事件 · 喷泉广场升起红色烟柱，护卫与商队迎战（概念图，AI 生成）</sub></p>
 
 每次开市开局即写入一个事件标志：是否触发本场袭击。
 
@@ -356,6 +371,9 @@ flowchart TD
 - 晕厥不计入玩家偷窃记录
 
 #### 4.8.3 商队护卫团（Caravan Guards · 中立）
+
+![商队护卫团](./assets/caravan-guards.png)
+<p align="center"><sub>商队护卫团 · 左 Caravan Guard / 中 Houndmaster + mastiff + falcon / 右 Sergeant（概念图，AI 生成）</sub></p>
 
 扩展原 §4.5 的 `caravan_guard`：明确其作为**常驻中立生物**的角色，并新增 3 个变体形成完整防御梯队。所有护卫共用 `<sb>:guards` 实体 tag。
 
