@@ -11,6 +11,7 @@ AI-assisted-Minecraft-Developers 组织下的 **Minecraft 模组 / 玩法概念�
 | 目录 | 概念 | 一句话定位 | 状态 |
 |---|---|---|---|
 | [spice-bazaar](./spice-bazaar/design.md) | 千味市集 · Spice Bazaar | 偶发刷新的临时维度，丝绸之路风格商队 NPC 集市，以物易物 + 自有货币"香料印记"作中转 | 概念设计稿 v0.2 |
+| [lost-future](./lost-future/design.md) | 过去的未来 · Lost Future | 让各版本被移除与未实现的官方内容回归游戏中，原版风格合成 + 新作用 + 不破坏平衡 | 概念设计稿 v0.1 |
 
 ---
 
